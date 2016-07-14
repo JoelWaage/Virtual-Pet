@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>cheep cheep</title>
+  </head>
+  <body>
+    <h1>@Model.GetName()</h1>
+
+    <form action="/tam_home" method="post">
+      <hr>
+      <button id="feed" name="feed" type="submit">Feed Me!</button>
+      <hr>
+      <button id="play" name="play" type="submit">Play a Game!</button>
+      <hr>
+      <button id="bed" name="bed" type="submit">night/night</button>
+      <hr>
+      <button id="clean" name="clean" type="submit">clean my POO</button>
+      <hr>
+    </form>
+
+    <h2>Hunger: @Model.GetHunger()</h2>
+    <h2>Happiness: @Model.GetHappy()</h2>
+    <h2>Energy:  @Model.GetEnergy()</h2>
+    <h2>Hygiene: @Model.GetClean()</h2>
+
+  </body>
+</html>
