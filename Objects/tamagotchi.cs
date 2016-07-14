@@ -11,6 +11,9 @@ namespace VirtualPet.Objects
     private string _happy;
     private string _energy;
     private string _clean;
+    private int _id;
+    private static List<Tam> _instances = new List<Tam> {};
+
 
 // Constructor
     public Tam (string newname, int hunger, string happy, string energy, string clean)
@@ -20,8 +23,15 @@ namespace VirtualPet.Objects
       _happy = happy;
       _energy = energy;
       _clean = clean;
+      _instances.Add(this);
+      _id = _instances.Count;
     }
-// Getters and Setters
+// Getters and Setter
+    public int GetId()
+    {
+      return _id;
+    }
+
     public void SetName(string newName)
     {
       _name = newName;
@@ -68,5 +78,17 @@ namespace VirtualPet.Objects
     {
       return _clean;
     }
+
+    public static Tam Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
+
+// Save Method
+    // public void Save()
+    // {
+    //   newTam = newTam;
+    // }
+
   }
 }

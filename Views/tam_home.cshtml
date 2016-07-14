@@ -7,7 +7,8 @@
   <body>
     <h1>@Model.GetName()</h1>
 
-    <form action="/tam_home" method="post">
+    <form action="/tam_play" method="post">
+      <input type="hidden" name="tam-id" value=@Model.GetId()>
       <hr>
       <button id="feed" name="feed" type="submit">Feed Me!</button>
       <hr>
